@@ -36,7 +36,7 @@
 }
 
 .ionic_datepicker_popup .selected_date {
-  background-color: #7eb818;
+  /*background-color: #7eb818;*/
   border-radius: 50%;
   /*color: #fff;*/
   font-weight: bold;

@@ -26,12 +26,12 @@
   "dependencies": {
     "ionic": ">=0.9.27"
   },
-  "_release": "73a5a81fc5",
+  "_release": "ec1a9537fc",
   "_resolution": {
     "type": "commit",
-    "commit": "73a5a81fc50d9068566a4ec7807692a03a0eb146"
+    "commit": "ec1a9537fc496fe87cbdfcd1a862c228992fad3a"
   },
   "_source": "https://github.com/nickpetrov/ionic-datepicker.git",
-  "_target": "73a5a81fc50d9068566a4ec7807692a03a0eb146",
+  "_target": "ec1a9537fc496fe87cbdfcd1a862c228992fad3a",
   "_originalSource": "https://github.com/nickpetrov/ionic-datepicker.git"
 }
