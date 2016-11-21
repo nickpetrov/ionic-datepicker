@@ -125,6 +125,11 @@ angular.module('ionic-datepicker.provider', [])
     }
 
     function getReservationDateRange(reservation) {
+      reservation.start_date_of_booking = _.replace(reservation.start_date_of_booking, ' 00:00:00', '');
+      reservation.end_date_of_booking = _.replace(reservation.end_date_of_booking, ' 00:00:00', '');
+      reservation.start_date_of_booking = moment(reservation.start_date_of_booking);
+      reservation.end_date_of_booking = moment(reservation.end_date_of_booking);
+
       var start = new Date(reservation.start_date_of_booking);
       var end = new Date(reservation.end_date_of_booking);
       var dateRange = moment.range(start, end);
@@ -201,7 +206,6 @@ angular.module('ionic-datepicker.provider', [])
       var tempDate, disabled, paid, unpaid;
       $scope.firstDayEpoch = resetHMSM(new Date(currentDate.getFullYear(), currentDate.getMonth(), firstDay)).getTime();
       $scope.lastDayEpoch = resetHMSM(new Date(currentDate.getFullYear(), currentDate.getMonth(), lastDay)).getTime();
-
       for (var i = firstDay; i <= lastDay; i++) {
         tempDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), i);
         disabled = (tempDate.getTime() < $scope.fromDate) || (tempDate.getTime() > $scope.toDate) || $scope.mainObj.disableWeekdays.indexOf(tempDate.getDay()) >= 0;
@@ -214,7 +218,6 @@ angular.module('ionic-datepicker.provider', [])
           paid = _.includes($scope.paidDates.dates, t);
           unpaid = _.includes($scope.unpaidDates.dates, t);
         }
-
 
         $scope.dayList.push({
           date: tempDate.getDate(),
