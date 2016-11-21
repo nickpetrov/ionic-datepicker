@@ -46,8 +46,10 @@
              ng-class="{'selected_date': (dayList[row + $index].epoch === selctedDateEpoch),
                       'today' : (dayList[row + $index].epoch == today),
                       'pointer_events_none':((disabledDates.indexOf(dayList[row + $index].epoch) >= 0) || dayList[row + $index].disabled),
-                      'pointer_events_test': (dayList[row + $index].paid),
-                      'pointer_events_test1': (dayList[row + $index].unpaid)}"
+                      'pointer_events_paid': (dayList[row + $index].paid && click),
+                      'pointer_events_unpaid': (dayList[row + $index].unpaid  && click),
+                      'pointer_events_paid_inactive': (dayList[row + $index].paid && !click),
+                      'pointer_events_unpaid_inactive': (dayList[row + $index].unpaid  && !click)}"
              ng-click="dateSelected(dayList[row + $index])">
           <div class="date_cell">
             {{dayList[row + col].date}}

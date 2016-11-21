@@ -79,12 +79,20 @@
   color: #aaaaaa !important;
 }
 
-.ionic_datepicker_popup .popup-body .pointer_events_test {
+.ionic_datepicker_popup .popup-body .pointer_events_paid {
+  background-color: #7eb818 !important;
+}
+
+.ionic_datepicker_popup .popup-body .pointer_events_unpaid {
+  background-color: yellow !important;
+}
+
+.ionic_datepicker_popup .popup-body .pointer_events_paid_inactive {
   pointer-events: none;
   background-color: #7eb818 !important;
 }
 
-.ionic_datepicker_popup .popup-body .pointer_events_test1 {
+.ionic_datepicker_popup .popup-body .pointer_events_unpaid_inactive {
   pointer-events: none;
   background-color: yellow !important;
 }
